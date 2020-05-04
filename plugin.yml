@@ -1,0 +1,11 @@
+name: HypeRules
+version: 0.0.1
+main: fr.syfizz.hyperules.HypeRules
+
+description: Simple plugin qui demande l'acceptation des règles dans un menu
+author: SyFizz_
+database: false
+
+commands:
+  hyperules:
+    description: Commande principale du plugin

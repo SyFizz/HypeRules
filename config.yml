@@ -1,0 +1,89 @@
+gui:
+  #Le nombre de lignes du GUI
+  rows: 1
+  #Le nom du GUI
+  name: "&6Règles"
+  0:
+    #ID de l'item. Liste des ID : https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+    itemid: PAPER
+    #Le nombre d'items qu'il doit y avoir (entre 1 et 64)
+    amount: 1
+    #Le nom de l'item
+    itemname: "Soyez respectueux"
+    #Le lore de l'item
+    lores:
+    - Si vous ne l'êtes pas,
+    - vous risquez une sanction.
+    #Les enchantements de l'item (echantmentment:niveau)
+    enchantments:
+    - haste:1
+    #Le slot de l'item. Le premier slot est 0, le deuxieme 1 etc.
+    slot: 0
+  1:
+    itemid: PAPER
+    amount: 1
+    itemname: "Ecoutez le staff"
+    lores:
+    - Le staff à toujours raison !
+    enchantments:
+    slot: 1
+  2:
+    itemid: PAPER
+    amount: 1
+    itemname: "Ne trichez pas"
+    lores:
+    - Si vous trichez,
+    - Vous serez banni !
+    enchantments:
+    slot: 2
+  3:
+    itemid: PAPER
+    amount: 1
+    itemname: "Soyez fair-play"
+    lores:
+    - Merci d'être fair-play afin que tout le monde
+    - puisse passer un agréable moment.
+    enchantments:
+    slot: 3
+  #CET ITEM EST L'ITEM D'ACCEPTATION
+  agree:
+    itemid: EMERALD_BLOCK
+    amount: 1
+    itemname: "&aAccepter"
+    lores:
+    - Lorsque vous cliquez ici,
+    - vous certifiez avoir lu et accepté les règles.
+    - Si vous les acceptez, vous vous engagez à les respecter !
+    enchantments:
+    slot: 7
+  #CET ITEM EST l'ITEM DE REFUS
+  disagree:
+    itemid: REDSTONE_BLOCK
+    itemamount: 1
+    itemname: "&cRefuser"
+    lores:
+    - Vous ne pourrez pas jouer sur notre serveur si vous refuser les règles.
+    enchantments:
+    slot: 8
+
+
+
+#Les commandes qui seront exécutées par la console quand le joueur accepte les règles sont listées ci-dessous.
+#%player% est le pseudo du joueur qui accepte les règles.
+agreecommands:
+- tell %player% Merci d'avoir accepté les règles !
+#Même chose que plus haut, mais quand on clique sur le bouton de refus.
+disagreecommands:
+- kick %player% Vous devez accepter les règles pour jouer sur le serveur !
+
+#Définit si le joueur n'ayant pas encore accepté les règles peut être vu des autres joueurs ou pas.
+#Par défaut, le joueur ne voit pas et n'est pas vu des autres joueurs
+hidePlayer: true
+reloadPermission: hyperules.reload
+noPermissionMessage: "&cDésolé, vous n'avez pas la permission d'exécuter cette commande"
+wrongArgument: "&cDésolé, cet argument n'est pas correct"
+tooMuchOrFewArguments: "&cDésolé, cette commande doit prendre &e1&c argument"
+successfullyReloaded: "&aConfiguration rechargée avec succès"
+
+#NE PAS TOUCHER - STOCKAGE DES JOUEURS AYANT ACCEPTÉ
+players: []
